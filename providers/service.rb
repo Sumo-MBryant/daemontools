@@ -143,6 +143,13 @@ action :up do
   end
 end
 
+action :down do
+  if @svc.running
+    run_command_with_systems_locale(:command => "svc -d #{node['daemontools']['service_dir']}/#{new_resource.service_name}")
+    new_resource.updated_by_last_action(true)
+  end
+end
+
 action :once do
   if @svc.running
     run_command_with_systems_locale(:command => "svc -o #{node['daemontools']['service_dir']}/#{new_resource.service_name}")
