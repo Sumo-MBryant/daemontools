@@ -72,6 +72,7 @@ notifying_action :enable do
         owner new_resource.owner
         group new_resource.group
         mode 0755
+        variables :variables => new_resource.variables unless new_resource.variables.empty?
       end
     end
     template "#{new_resource.directory}/finish" do
@@ -80,6 +81,7 @@ notifying_action :enable do
       owner new_resource.owner
       group new_resource.group
       mode 0755
+      variables :variables => new_resource.variables unless new_resource.variables.empty?
       only_if { new_resource.finish }
     end
   end
