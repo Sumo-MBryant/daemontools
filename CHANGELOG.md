@@ -2,6 +2,9 @@ daemontools Cookbook CHANGELOG
 ==============================
 This file is used to list changes made in each version of the daemontools cookbook.
 
+v1.4.0 (2014-12-15)
+-------------------
+- Adding variables parameter to templates in service LWRP
 
 v1.3.0 (2014-04-23)
 -------------------
