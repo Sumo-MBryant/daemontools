@@ -10,10 +10,6 @@ package 'lsof' do
   package_name 'lsof' if platform_family?('rhel', 'fedora')
 end
 
-service 'svscan' do
-  action [:enable, :start]
-end
-
 daemontools_service 'test-service' do
   directory ::File.join('/tmp', 'test-service')
   template 'test-service'
