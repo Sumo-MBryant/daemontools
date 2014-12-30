@@ -17,21 +17,4 @@
 # limitations under the License.
 #
 
-include_recipe "ucspi-tcp"
-
-case node['daemontools']['install_method']
-when "package"
-
-  include_recipe "daemontools::package"
-
-when "aur"
-
-  include_recipe "daemontools::aur"
-
-when "source"
-
-  include_recipe "daemontools::source"
-
-else
-  Chef::Log.info("Could not find a method to install daemontools for platform #{node['platform']}, version #{node['platform_version']}")
-end
+include_recipe "daemontools::#{node['daemontools']['install_method']}"

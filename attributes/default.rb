@@ -29,20 +29,12 @@ when "ubuntu"
     default['daemontools']['bin_dir'] = "/usr/bin"
     default['daemontools']['service_dir'] = "/etc/service"
     default['daemontools']['install_method'] = "package"
-  else
-    default['daemontools']['bin_dir'] = "/usr/local/bin"
-    default['daemontools']['service_dir'] = "/etc/service"
-    default['daemontools']['install_method'] = "source"
   end
 when "debian"
   if node['platform_version'].to_f >= 5.0
     default['daemontools']['bin_dir'] = "/usr/bin"
     default['daemontools']['service_dir'] = "/etc/service"
     default['daemontools']['install_method'] = "package"
-  else
-    default['daemontools']['bin_dir'] = "/usr/local/bin"
-    default['daemontools']['service_dir'] = "/etc/service"
-    default['daemontools']['install_method'] = "source"
   end
 when "arch"
   default['daemontools']['bin_dir'] = "/usr/sbin"
@@ -52,8 +44,4 @@ when "gentoo"
   default['daemontools']['bin_dir'] = "/usr/bin"
   default['daemontools']['service_dir'] = "/service"
   default['daemontools']['install_method'] = "package"
-else
-  default['daemontools']['bin_dir'] = "/usr/local/bin"
-  default['daemontools']['service_dir'] = "/etc/service"
-  default['daemontools']['install_method'] = "source"
 end
