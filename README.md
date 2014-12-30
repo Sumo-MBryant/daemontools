@@ -34,6 +34,7 @@ Attributes
   directory where svscan will find services to manage.
 * `node['daemontools']['install_method']` - how to install
   daemontools, can be `source`, `package` or `aur` (for ArchLinux).
+* `node['daemontools']['start_svscan']` - whether to start `svscan` (includes the `svscan` recipe), `true` by default.
 
 Recipes
 =======

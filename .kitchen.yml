@@ -19,3 +19,10 @@ suites:
     run_list:
       - recipe[test]
     attributes:
+
+  - name: nostart-svscan
+    run_list:
+      - recipe[test::nostart-svscan]
+    attributes:
+      daemontools:
+        start_svscan: false
