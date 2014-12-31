@@ -16,6 +16,6 @@ describe 'daemontools_service[nested-service-dir]' do
   end
 
   describe port(2320) do
-    it { should be_listening.with('tcp')}
+    it { should be_listening.with('tcp') }
   end
 end

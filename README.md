@@ -35,6 +35,7 @@ Attributes
 * `node['daemontools']['install_method']` - how to install
   daemontools, can be `source`, `package` or `aur` (for ArchLinux).
 * `node['daemontools']['start_svscan']` - whether to start `svscan` (includes the `svscan` recipe), `true` by default.
+* `node['daemontools']['package_name']` - name of the "daemontools" package, default value varies by platform.
 
 Recipes
 =======
