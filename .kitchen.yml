@@ -26,3 +26,11 @@ suites:
     attributes:
       daemontools:
         start_svscan: false
+
+  - name: source
+    run_list:
+      - recipe[daemontools::source]
+    attributes:
+      daemontools:
+        start_svscan: false
+        bin_dir: "/usr/local/bin"
